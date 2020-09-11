@@ -23,5 +23,11 @@
 				}
 			}
 		}
+	},
+	"storage": {
+		"songStorage": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
 	}
 }
