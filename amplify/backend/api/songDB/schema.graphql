@@ -3,6 +3,6 @@ type Song @model {
     title: String!
     description: String!
     filePath: String!
-    like: Int!
+    likes: Int!
     owner: String!
 }

@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"amplifyreactapp17ff568b": {
+		"testslswithamplify3794b34e": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],
@@ -8,7 +8,7 @@
 		}
 	},
 	"api": {
-		"songAPI": {
+		"songDB": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
@@ -16,7 +16,7 @@
 					"defaultAuthentication": {
 						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
 						"userPoolConfig": {
-							"userPoolId": "authamplifyreactapp17ff568b"
+							"userPoolId": "authtestslswithamplify3794b34e"
 						}
 					},
 					"additionalAuthenticationProviders": []
