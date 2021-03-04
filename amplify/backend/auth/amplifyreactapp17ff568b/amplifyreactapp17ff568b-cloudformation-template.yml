@@ -91,8 +91,32 @@ Parameters:
               
   userPoolGroupList:
     Type: CommaDelimitedList
-                          
+              
   dependsOn:
+    Type: CommaDelimitedList
+        
+  thirdPartyAuth:
+    Type: String
+              
+  userPoolGroups:
+    Type: String
+              
+  adminQueries:
+    Type: String
+            
+  triggers:
+    Type: String
+                
+  hostedUI:
+    Type: String
+                        
+  serviceName:
+    Type: String
+                    
+  parentStack:
+    Type: String
+                
+  permissions:
     Type: CommaDelimitedList
     
 Conditions:
@@ -171,6 +195,18 @@ Resources:
         SnsCallerArn: !GetAtt SNSRole.Arn
         ExternalId: amplif17ff568b_role_external_id
     
+  
+    
+    
+  
+    
+    
+  
+  
+   
+    
+  # Updating lambda role with permissions to Cognito
+  
   
   UserPoolClientWeb:
   # Created provide application access to user pool

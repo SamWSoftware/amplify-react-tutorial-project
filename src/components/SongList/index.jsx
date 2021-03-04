@@ -45,7 +45,10 @@ const SongList = () => {
 
     const fetchSongs = async () => {
         try {
-            const songData = await API.graphql(graphqlOperation(listSongs));
+            const songData = await API.graphql({
+                query: listSongs,
+                authMode: 'AWS_IAM',
+            });
             const songList = songData.data.listSongs.items;
             console.log('song list', songList);
             setSongs(songList);
@@ -56,12 +59,16 @@ const SongList = () => {
 
     const addLike = async idx => {
         try {
-            const song = songs[idx];
+            const song = { ...songs[idx] };
             song.like = song.like + 1;
             delete song.createdAt;
             delete song.updatedAt;
 
-            const songData = await API.graphql(graphqlOperation(updateSong, { input: song }));
+            const songData = await API.graphql({
+                query: updateSong,
+                variables: { input: song },
+                authMode: 'AWS_IAM',
+            });
             const songList = [...songs];
             songList[idx] = songData.data.updateSong;
             setSongs(songList);

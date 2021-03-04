@@ -28,7 +28,11 @@ const AddSong = ({ onUpload }) => {
             filePath: key,
             like: 0,
         };
-        await API.graphql(graphqlOperation(createSong, { input: createSongInput }));
+        await API.graphql({
+            query: createSong,
+            variables: { input: createSongInput },
+            authMode: 'AWS_IAM',
+        });
         onUpload();
     };
 
