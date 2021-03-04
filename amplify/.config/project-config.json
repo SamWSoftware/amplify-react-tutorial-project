@@ -2,7 +2,7 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "testslswithamplify",
+  "projectName": "amplifyreactapp",
   "version": "3.0",
   "frontend": "javascript",
   "javascript": {

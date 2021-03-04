@@ -8,7 +8,7 @@ export const getSong = /* GraphQL */ `
             title
             description
             filePath
-            likes
+            like
             owner
             createdAt
             updatedAt
@@ -23,7 +23,7 @@ export const listSongs = /* GraphQL */ `
                 title
                 description
                 filePath
-                likes
+                like
                 owner
                 createdAt
                 updatedAt
